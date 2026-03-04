@@ -1164,11 +1164,13 @@ while (!found &amp;&amp; (System.currentTimeMillis() - startTime) &lt; pollerTim
 def elapsed = System.currentTimeMillis() - startTime
 if (found) {
     log.info(&quot;Hearing &quot; + hearingId + &quot; found after &quot; + elapsed + &quot;ms&quot;)
+    println(&quot;Hearing &quot; + hearingId + &quot; found after &quot; + elapsed + &quot;ms&quot;)
     SampleResult.setResponseMessage(&quot;Hearing found after &quot; + elapsed + &quot;ms&quot;)
 } else {
     SampleResult.setSuccessful(false)
     SampleResult.setResponseMessage(&quot;Hearing &quot; + hearingId + &quot; not found within &quot; + pollerTimeout + &quot;ms timeout&quot;)
     log.error(&quot;Hearing &quot; + hearingId + &quot; not found within &quot; + pollerTimeout + &quot;ms timeout&quot;)
+    println(&quot;Hearing &quot; + hearingId + &quot; not found within &quot; + pollerTimeout + &quot;ms timeout&quot;)
 }</stringProp>
         </JSR223Sampler>
         <hashTree/>
@@ -1228,7 +1230,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
           </JSR223PreProcessor>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add Prosecution Counsel" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add Prosecution Counsel">
           <intProp name="HTTPSampler.concurrentPool">6</intProp>
           <stringProp name="HTTPSampler.path">/hearing-service/command/api/rest/hearing/hearings/${hearingId}</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -1247,7 +1249,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
           <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">CJSCPPUID</stringProp>
@@ -1260,7 +1262,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="AddProsecutionCounselPreProcessor" enabled="true">
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="AddProsecutionCounselPreProcessor">
             <stringProp name="cacheKey">true</stringProp>
             <stringProp name="filename"></stringProp>
             <stringProp name="parameters"></stringProp>
@@ -1571,7 +1573,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="CourtListRestriction" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="CourtListRestriction" enabled="false">
         <stringProp name="ThreadGroup.num_threads">${numberOfThreads}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${rampUpPeriod}</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -1717,6 +1719,7 @@ if (found) {
     SampleResult.setSuccessful(false)
     SampleResult.setResponseMessage(&quot;Hearing &quot; + hearingId + &quot; not found within &quot; + pollerTimeout + &quot;ms timeout&quot;)
     log.error(&quot;Hearing &quot; + hearingId + &quot; not found within &quot; + pollerTimeout + &quot;ms timeout&quot;)
+    println(&quot;Hearing &quot; + hearingId + &quot; not found within &quot; + pollerTimeout + &quot;ms timeout&quot;)
 }</stringProp>
           </JSR223Sampler>
           <hashTree/>
@@ -1928,7 +1931,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="CancelRemainingHearingDaysWhenMultidayHearingIsCracked">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="CancelRemainingHearingDaysWhenMultidayHearingIsCracked" enabled="false">
         <stringProp name="ThreadGroup.num_threads">${numberOfThreads}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${rampUpPeriod}</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -2084,6 +2087,7 @@ if (found) {
     SampleResult.setSuccessful(false)
     SampleResult.setResponseMessage(&quot;Hearing &quot; + hearingId + &quot; not found within &quot; + pollerTimeout + &quot;ms timeout&quot;)
     log.error(&quot;Hearing &quot; + hearingId + &quot; not found within &quot; + pollerTimeout + &quot;ms timeout&quot;)
+    println(&quot;Hearing &quot; + hearingId + &quot; not found within &quot; + pollerTimeout + &quot;ms timeout&quot;)
 }</stringProp>
         </JSR223Sampler>
         <hashTree/>
@@ -2419,7 +2423,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="ResultShouldPublishDDCHResultsOnInitialShareAndNotForAmendAndReshare">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="ResultShouldPublishDDCHResultsOnInitialShareAndNotForAmendAndReshare" enabled="false">
         <stringProp name="ThreadGroup.num_threads">${numberOfThreads}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${rampUpPeriod}</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -2571,6 +2575,7 @@ if (found) {
     SampleResult.setSuccessful(false)
     SampleResult.setResponseMessage(&quot;Hearing &quot; + hearingId + &quot; not found within &quot; + pollerTimeout + &quot;ms timeout&quot;)
     log.error(&quot;Hearing &quot; + hearingId + &quot; not found within &quot; + pollerTimeout + &quot;ms timeout&quot;)
+    println(&quot;Hearing &quot; + hearingId + &quot; not found within &quot; + pollerTimeout + &quot;ms timeout&quot;)
 }</stringProp>
         </JSR223Sampler>
         <hashTree/>
@@ -3270,7 +3275,7 @@ if (resultSetObj != null &amp;&amp; resultSetObj instanceof List) {
           </JSR223PostProcessor>
           <hashTree/>
         </hashTree>
-        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Sampler" enabled="true">
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Sampler">
           <stringProp name="scriptLanguage">groovy</stringProp>
           <stringProp name="parameters"></stringProp>
           <stringProp name="filename"></stringProp>
