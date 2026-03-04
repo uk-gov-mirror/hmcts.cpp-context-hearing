@@ -19,8 +19,13 @@ import java.util.Objects;
 import java.util.UUID;
 import java.util.stream.Stream;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @SuppressWarnings({"pmd:BeanMembersShouldSerialize", "PMD:BeanMembersShouldSerialize"})
 public class HearingTrialTypeDelegate implements Serializable {
+    private static final Logger LOGGER =
+            LoggerFactory.getLogger(HearingTrialTypeDelegate.class.getName());
 
     private static final long serialVersionUID = 1L;
 
@@ -44,6 +49,9 @@ public class HearingTrialTypeDelegate implements Serializable {
     }
 
     public void handleTrialTypeSetForHearing(final HearingTrialType hearingTrialType) {
+        if (this.momento.getHearing() == null) {
+            LOGGER.error("Hearing is null! HearingId:" + hearingTrialType.getHearingId());
+        }
         if (nonNull(hearingTrialType.getTrialTypeId())) {
             this.momento.getHearing().setCrackedIneffectiveTrial(CrackedIneffectiveTrial.crackedIneffectiveTrial()
                     .withId(hearingTrialType.getTrialTypeId())

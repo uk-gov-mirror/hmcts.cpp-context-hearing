@@ -218,6 +218,10 @@ public class ShareResultsCommandHandler extends AbstractCommandHandler {
     private Stream<Object> shareResultsEnrichedWithYouthCourt(final HearingAggregate hearingAggregate, final ShareResultsCommand command ) {
 
         final Hearing hearing = hearingAggregate.getHearing();
+
+        if (hearing == null) {
+            LOGGER.error("Hearing is null! HearingId:" + command.getHearingId());
+        }
         final YouthCourt youthCourt;
 
         if(hearing.getYouthCourtDefendantIds() != null && !hearing.getYouthCourtDefendantIds().isEmpty()) {
