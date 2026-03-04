@@ -959,6 +959,39 @@ customMetricsFile.append(&quot;timestamp,eventLogCount,publishedEventCount,notLi
 </stringProp>
         </JSR223PreProcessor>
         <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Hearing Event Definitions">
+          <intProp name="HTTPSampler.concurrentPool">6</intProp>
+          <stringProp name="HTTPSampler.path">/hearing-service/command/api/rest/hearing/hearings/event-definitions</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;id&quot;:&quot;96ff13bf-0aac-43ba-877d-c7da67b1e30d&quot;,&quot;eventDefinitions&quot;:[{&quot;id&quot;:&quot;67b75d91-085f-4c75-b941-09c80bee6df6&quot;,&quot;caseAttribute&quot;:&quot;SENTENCING&quot;,&quot;actionLabel&quot;:&quot;Hearing ended&quot;,&quot;actionSequence&quot;:882929325,&quot;groupLabel&quot;:&quot;wKkH7am4zz&quot;,&quot;groupSequence&quot;:2095509888,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;Hearing ended&quot;},{&quot;id&quot;:&quot;b71e7d2a-d3b3-4a55-a393-6d451767fc05&quot;,&quot;caseAttribute&quot;:&quot;SENTENCING&quot;,&quot;actionLabel&quot;:&quot;Start Hearing&quot;,&quot;actionSequence&quot;:936967479,&quot;groupLabel&quot;:&quot;4428rcyPcN&quot;,&quot;groupSequence&quot;:1603353170,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;YOxCjRZgyK&quot;},{&quot;id&quot;:&quot;699a2d2e-56f3-4952-90ab-e22870b2196d&quot;,&quot;caseAttribute&quot;:&quot;SENTENCING&quot;,&quot;actionLabel&quot;:&quot;Identify defendant&quot;,&quot;actionSequence&quot;:1359865467,&quot;groupLabel&quot;:&quot;y6x4DdKgv9&quot;,&quot;groupSequence&quot;:685479997,&quot;alterable&quot;:true,&quot;recordedLabel&quot;:&quot;6Zs6zndse1&quot;},{&quot;id&quot;:&quot;a66576ab-b966-4480-988f-3f17f019897e&quot;,&quot;caseAttribute&quot;:&quot;SENTENCING&quot;,&quot;actionLabel&quot;:&quot;Take Plea&quot;,&quot;actionSequence&quot;:1593556401,&quot;groupLabel&quot;:&quot;zLiKB6nUV3&quot;,&quot;groupSequence&quot;:606936825,&quot;alterable&quot;:true,&quot;recordedLabel&quot;:&quot;ZrWfdKkZkn&quot;},{&quot;id&quot;:&quot;be59557a-d89d-47d3-a6f1-a4db67986616&quot;,&quot;caseAttribute&quot;:&quot;SENTENCING&quot;,&quot;actionLabel&quot;:&quot;Prosecution Opening&quot;,&quot;actionSequence&quot;:1559526053,&quot;groupLabel&quot;:&quot;hWAX5qq2Aw&quot;,&quot;groupSequence&quot;:970603096,&quot;alterable&quot;:true,&quot;recordedLabel&quot;:&quot;IQ5Mkrdk13&quot;},{&quot;id&quot;:&quot;9d3eaaef-1f67-47ab-8b8f-18877110fa34&quot;,&quot;caseAttribute&quot;:&quot;SENTENCING&quot;,&quot;actionLabel&quot;:&quot;&lt;counsel.name&gt;&quot;,&quot;actionSequence&quot;:2072444200,&quot;groupLabel&quot;:&quot;mm4jEfVemq&quot;,&quot;groupSequence&quot;:54208119,&quot;alterable&quot;:true,&quot;recordedLabel&quot;:&quot;R8g9vE0tVD&quot;},{&quot;id&quot;:&quot;b21b4aea-e372-4448-99cc-577b9e8c6ab4&quot;,&quot;caseAttribute&quot;:&quot;SENTENCING&quot;,&quot;actionLabel&quot;:&quot;Sentencing&quot;,&quot;actionSequence&quot;:325334225,&quot;groupLabel&quot;:&quot;trk2y8UF4X&quot;,&quot;groupSequence&quot;:1904954095,&quot;alterable&quot;:true,&quot;recordedLabel&quot;:&quot;M7O5kYljzS&quot;},{&quot;id&quot;:&quot;0df93f18-0a21-40f5-9fb3-da4749cd70fe&quot;,&quot;caseAttribute&quot;:&quot;SENTENCING&quot;,&quot;actionLabel&quot;:&quot;End Hearing&quot;,&quot;actionSequence&quot;:229112933,&quot;groupLabel&quot;:&quot;LWtWrTepQf&quot;,&quot;groupSequence&quot;:1106999235,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;n9qjPfrIQQ&quot;},{&quot;id&quot;:&quot;160ecb51-29ee-4954-bbbf-daab18a24fbb&quot;,&quot;caseAttribute&quot;:&quot;PAUSE_RESUME&quot;,&quot;actionLabel&quot;:&quot;Pause&quot;,&quot;actionSequence&quot;:809187934,&quot;groupLabel&quot;:&quot;W8267kGIM8&quot;,&quot;groupSequence&quot;:837036653,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;tD4x6oPzpO&quot;},{&quot;id&quot;:&quot;64476e43-2138-46d5-b58b-848582cf9b07&quot;,&quot;caseAttribute&quot;:&quot;PAUSE_RESUME&quot;,&quot;actionLabel&quot;:&quot;Resume&quot;,&quot;actionSequence&quot;:1777760034,&quot;groupLabel&quot;:&quot;DfxVnClQRk&quot;,&quot;groupSequence&quot;:257720856,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;Ek3fJ90eXr&quot;},{&quot;id&quot;:&quot;50fb4a64-943d-4a2a-afe6-4b5c9e99e043&quot;,&quot;caseAttribute&quot;:&quot;APPEAL&quot;,&quot;actionLabel&quot;:&quot;Appellant opens&quot;,&quot;actionSequence&quot;:1165860257,&quot;groupLabel&quot;:&quot;UJko9uPUfy&quot;,&quot;groupSequence&quot;:1583647649,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;oVVmNi7sgT&quot;},{&quot;id&quot;:&quot;e9060336-4821-4f46-969c-e08b33b48071&quot;,&quot;caseAttribute&quot;:&quot;OPEN_CASE&quot;,&quot;actionLabel&quot;:&quot;Open case prosecution&quot;,&quot;actionSequence&quot;:157682722,&quot;groupLabel&quot;:&quot;dYRCaSpAB0&quot;,&quot;groupSequence&quot;:2111600802,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;fsGrkq8Kko&quot;},{&quot;id&quot;:&quot;a3a9fe0c-a9a7-4e17-b0cd-42606722bbb0&quot;,&quot;caseAttribute&quot;:&quot;OPEN_CASE&quot;,&quot;actionLabel&quot;:&quot;Defence counsel.name opens case regarding defendant defendant.name&quot;,&quot;actionSequence&quot;:573161802,&quot;groupLabel&quot;:&quot;L2SMODumuq&quot;,&quot;groupSequence&quot;:270979194,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;UCMuuYkd3I&quot;},{&quot;id&quot;:&quot;cc00cca8-39ba-431c-b08f-8c6f9be185d1&quot;,&quot;caseAttribute&quot;:&quot;CLOSE_CASE&quot;,&quot;actionLabel&quot;:&quot;Defence counsel.name closes case regarding defendant defendant.name&quot;,&quot;actionSequence&quot;:788845658,&quot;groupLabel&quot;:&quot;v15wqkRiYq&quot;,&quot;groupSequence&quot;:262053570,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;yUPzPboGjk&quot;},{&quot;id&quot;:&quot;b335327a-7f58-4f26-a2ef-7e07134ba60b&quot;,&quot;caseAttribute&quot;:&quot;DISCUSSION&quot;,&quot;actionLabel&quot;:&quot;Point of law discussion prosecution&quot;,&quot;actionSequence&quot;:437014501,&quot;groupLabel&quot;:&quot;vizhheLRn2&quot;,&quot;groupSequence&quot;:56047713,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;xf7NtBpO3B&quot;},{&quot;id&quot;:&quot;c3edf650-13c4-4ecb-9f85-6100ad8e4ffc&quot;,&quot;caseAttribute&quot;:&quot;DISCUSSION&quot;,&quot;actionLabel&quot;:&quot;Arraign defendant.name&quot;,&quot;actionSequence&quot;:1582758733,&quot;groupLabel&quot;:&quot;aaJa2BpROG&quot;,&quot;groupSequence&quot;:1843187454,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;rpEKxA3iAu&quot;}]}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">CJSCPPUID</stringProp>
+                <stringProp name="Header.value">${userId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/vnd.hearing.create-hearing-event-definitions+json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
         <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
@@ -1029,7 +1062,7 @@ log.info(&quot;thread count -&gt; &quot; + vars.get(&quot;numberOfThreads&quot;)
           <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">CJSCPPUID</stringProp>
@@ -1042,7 +1075,7 @@ log.info(&quot;thread count -&gt; &quot; + vars.get(&quot;numberOfThreads&quot;)
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="InitiateHearingPreProcessor" enabled="true">
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="InitiateHearingPreProcessor">
             <stringProp name="cacheKey">true</stringProp>
             <stringProp name="filename"></stringProp>
             <stringProp name="parameters"></stringProp>
@@ -1093,7 +1126,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
           </JSR223PreProcessor>
           <hashTree/>
         </hashTree>
-        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Poll Hearing Created" enabled="true">
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Poll Hearing Created">
           <stringProp name="scriptLanguage">groovy</stringProp>
           <stringProp name="parameters"></stringProp>
           <stringProp name="filename"></stringProp>
@@ -1139,7 +1172,7 @@ if (found) {
 }</stringProp>
         </JSR223Sampler>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Update Defendant Attendance" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Update Defendant Attendance">
           <intProp name="HTTPSampler.concurrentPool">6</intProp>
           <stringProp name="HTTPSampler.path">/hearing-service/command/api/rest/hearing/hearings</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -1559,44 +1592,11 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
           <stringProp name="HTTPSampler.implementation"></stringProp>
         </ConfigTestElement>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Hearing Event Definitions">
-          <intProp name="HTTPSampler.concurrentPool">6</intProp>
-          <stringProp name="HTTPSampler.path">/hearing-service/command/api/rest/hearing/hearings/event-definitions</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&quot;id&quot;:&quot;96ff13bf-0aac-43ba-877d-c7da67b1e30d&quot;,&quot;eventDefinitions&quot;:[{&quot;id&quot;:&quot;67b75d91-085f-4c75-b941-09c80bee6df6&quot;,&quot;caseAttribute&quot;:&quot;SENTENCING&quot;,&quot;actionLabel&quot;:&quot;Hearing ended&quot;,&quot;actionSequence&quot;:882929325,&quot;groupLabel&quot;:&quot;wKkH7am4zz&quot;,&quot;groupSequence&quot;:2095509888,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;Hearing ended&quot;},{&quot;id&quot;:&quot;b71e7d2a-d3b3-4a55-a393-6d451767fc05&quot;,&quot;caseAttribute&quot;:&quot;SENTENCING&quot;,&quot;actionLabel&quot;:&quot;Start Hearing&quot;,&quot;actionSequence&quot;:936967479,&quot;groupLabel&quot;:&quot;4428rcyPcN&quot;,&quot;groupSequence&quot;:1603353170,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;YOxCjRZgyK&quot;},{&quot;id&quot;:&quot;699a2d2e-56f3-4952-90ab-e22870b2196d&quot;,&quot;caseAttribute&quot;:&quot;SENTENCING&quot;,&quot;actionLabel&quot;:&quot;Identify defendant&quot;,&quot;actionSequence&quot;:1359865467,&quot;groupLabel&quot;:&quot;y6x4DdKgv9&quot;,&quot;groupSequence&quot;:685479997,&quot;alterable&quot;:true,&quot;recordedLabel&quot;:&quot;6Zs6zndse1&quot;},{&quot;id&quot;:&quot;a66576ab-b966-4480-988f-3f17f019897e&quot;,&quot;caseAttribute&quot;:&quot;SENTENCING&quot;,&quot;actionLabel&quot;:&quot;Take Plea&quot;,&quot;actionSequence&quot;:1593556401,&quot;groupLabel&quot;:&quot;zLiKB6nUV3&quot;,&quot;groupSequence&quot;:606936825,&quot;alterable&quot;:true,&quot;recordedLabel&quot;:&quot;ZrWfdKkZkn&quot;},{&quot;id&quot;:&quot;be59557a-d89d-47d3-a6f1-a4db67986616&quot;,&quot;caseAttribute&quot;:&quot;SENTENCING&quot;,&quot;actionLabel&quot;:&quot;Prosecution Opening&quot;,&quot;actionSequence&quot;:1559526053,&quot;groupLabel&quot;:&quot;hWAX5qq2Aw&quot;,&quot;groupSequence&quot;:970603096,&quot;alterable&quot;:true,&quot;recordedLabel&quot;:&quot;IQ5Mkrdk13&quot;},{&quot;id&quot;:&quot;9d3eaaef-1f67-47ab-8b8f-18877110fa34&quot;,&quot;caseAttribute&quot;:&quot;SENTENCING&quot;,&quot;actionLabel&quot;:&quot;&lt;counsel.name&gt;&quot;,&quot;actionSequence&quot;:2072444200,&quot;groupLabel&quot;:&quot;mm4jEfVemq&quot;,&quot;groupSequence&quot;:54208119,&quot;alterable&quot;:true,&quot;recordedLabel&quot;:&quot;R8g9vE0tVD&quot;},{&quot;id&quot;:&quot;b21b4aea-e372-4448-99cc-577b9e8c6ab4&quot;,&quot;caseAttribute&quot;:&quot;SENTENCING&quot;,&quot;actionLabel&quot;:&quot;Sentencing&quot;,&quot;actionSequence&quot;:325334225,&quot;groupLabel&quot;:&quot;trk2y8UF4X&quot;,&quot;groupSequence&quot;:1904954095,&quot;alterable&quot;:true,&quot;recordedLabel&quot;:&quot;M7O5kYljzS&quot;},{&quot;id&quot;:&quot;0df93f18-0a21-40f5-9fb3-da4749cd70fe&quot;,&quot;caseAttribute&quot;:&quot;SENTENCING&quot;,&quot;actionLabel&quot;:&quot;End Hearing&quot;,&quot;actionSequence&quot;:229112933,&quot;groupLabel&quot;:&quot;LWtWrTepQf&quot;,&quot;groupSequence&quot;:1106999235,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;n9qjPfrIQQ&quot;},{&quot;id&quot;:&quot;160ecb51-29ee-4954-bbbf-daab18a24fbb&quot;,&quot;caseAttribute&quot;:&quot;PAUSE_RESUME&quot;,&quot;actionLabel&quot;:&quot;Pause&quot;,&quot;actionSequence&quot;:809187934,&quot;groupLabel&quot;:&quot;W8267kGIM8&quot;,&quot;groupSequence&quot;:837036653,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;tD4x6oPzpO&quot;},{&quot;id&quot;:&quot;64476e43-2138-46d5-b58b-848582cf9b07&quot;,&quot;caseAttribute&quot;:&quot;PAUSE_RESUME&quot;,&quot;actionLabel&quot;:&quot;Resume&quot;,&quot;actionSequence&quot;:1777760034,&quot;groupLabel&quot;:&quot;DfxVnClQRk&quot;,&quot;groupSequence&quot;:257720856,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;Ek3fJ90eXr&quot;},{&quot;id&quot;:&quot;50fb4a64-943d-4a2a-afe6-4b5c9e99e043&quot;,&quot;caseAttribute&quot;:&quot;APPEAL&quot;,&quot;actionLabel&quot;:&quot;Appellant opens&quot;,&quot;actionSequence&quot;:1165860257,&quot;groupLabel&quot;:&quot;UJko9uPUfy&quot;,&quot;groupSequence&quot;:1583647649,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;oVVmNi7sgT&quot;},{&quot;id&quot;:&quot;e9060336-4821-4f46-969c-e08b33b48071&quot;,&quot;caseAttribute&quot;:&quot;OPEN_CASE&quot;,&quot;actionLabel&quot;:&quot;Open case prosecution&quot;,&quot;actionSequence&quot;:157682722,&quot;groupLabel&quot;:&quot;dYRCaSpAB0&quot;,&quot;groupSequence&quot;:2111600802,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;fsGrkq8Kko&quot;},{&quot;id&quot;:&quot;a3a9fe0c-a9a7-4e17-b0cd-42606722bbb0&quot;,&quot;caseAttribute&quot;:&quot;OPEN_CASE&quot;,&quot;actionLabel&quot;:&quot;Defence counsel.name opens case regarding defendant defendant.name&quot;,&quot;actionSequence&quot;:573161802,&quot;groupLabel&quot;:&quot;L2SMODumuq&quot;,&quot;groupSequence&quot;:270979194,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;UCMuuYkd3I&quot;},{&quot;id&quot;:&quot;cc00cca8-39ba-431c-b08f-8c6f9be185d1&quot;,&quot;caseAttribute&quot;:&quot;CLOSE_CASE&quot;,&quot;actionLabel&quot;:&quot;Defence counsel.name closes case regarding defendant defendant.name&quot;,&quot;actionSequence&quot;:788845658,&quot;groupLabel&quot;:&quot;v15wqkRiYq&quot;,&quot;groupSequence&quot;:262053570,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;yUPzPboGjk&quot;},{&quot;id&quot;:&quot;b335327a-7f58-4f26-a2ef-7e07134ba60b&quot;,&quot;caseAttribute&quot;:&quot;DISCUSSION&quot;,&quot;actionLabel&quot;:&quot;Point of law discussion prosecution&quot;,&quot;actionSequence&quot;:437014501,&quot;groupLabel&quot;:&quot;vizhheLRn2&quot;,&quot;groupSequence&quot;:56047713,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;xf7NtBpO3B&quot;},{&quot;id&quot;:&quot;c3edf650-13c4-4ecb-9f85-6100ad8e4ffc&quot;,&quot;caseAttribute&quot;:&quot;DISCUSSION&quot;,&quot;actionLabel&quot;:&quot;Arraign defendant.name&quot;,&quot;actionSequence&quot;:1582758733,&quot;groupLabel&quot;:&quot;aaJa2BpROG&quot;,&quot;groupSequence&quot;:1843187454,&quot;alterable&quot;:false,&quot;recordedLabel&quot;:&quot;rpEKxA3iAu&quot;}]}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
-          </elementProp>
-          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-            <collectionProp name="HeaderManager.headers">
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">CJSCPPUID</stringProp>
-                <stringProp name="Header.value">${userId}</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">Content-Type</stringProp>
-                <stringProp name="Header.value">application/vnd.hearing.create-hearing-event-definitions+json</stringProp>
-              </elementProp>
-            </collectionProp>
-          </HeaderManager>
-          <hashTree/>
-        </hashTree>
-        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
           <stringProp name="LoopController.loops">3</stringProp>
         </LoopController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Initiate Hearing 1" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Initiate Hearing">
             <intProp name="HTTPSampler.concurrentPool">6</intProp>
             <stringProp name="HTTPSampler.path">/hearing-service/command/api/rest/hearing/hearings</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -1615,7 +1615,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
             <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
               <collectionProp name="HeaderManager.headers">
                 <elementProp name="" elementType="Header">
                   <stringProp name="Header.name">CJSCPPUID</stringProp>
@@ -1628,7 +1628,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="CourtListRestrictionInitiateHearing1PreProcessor" enabled="true">
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="CourtListRestrictionInitiateHearing1PreProcessor">
               <stringProp name="cacheKey">true</stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
@@ -1644,30 +1644,24 @@ if (!file.exists()) {
 
 def rawJson = file.text
 
-vars.put(&quot;hearingId1&quot;, UUID.randomUUID().toString())
-log.info(&quot;hearingId1-&gt; &quot; + vars.get(&quot;hearingId1&quot;))
+vars.put(&quot;hearingId&quot;, UUID.randomUUID().toString())
+log.info(&quot;hearingId-&gt; &quot; + vars.get(&quot;hearingId&quot;))
 
-vars.put(&quot;defendantId1&quot;, UUID.randomUUID().toString())
-log.info(&quot;defendantId1-&gt; &quot; + vars.get(&quot;defendantId1&quot;))
+vars.put(&quot;defendantId&quot;, UUID.randomUUID().toString())
+log.info(&quot;defendantId-&gt; &quot; + vars.get(&quot;defendantId&quot;))
 
-vars.put(&quot;defenceCounselId1&quot;, UUID.randomUUID().toString())
-log.info(&quot;defenceCounselId1-&gt; &quot; + vars.get(&quot;defenceCounselId1&quot;))
+vars.put(&quot;defenceCounselId&quot;, UUID.randomUUID().toString())
+log.info(&quot;defenceCounselId-&gt; &quot; + vars.get(&quot;defenceCounselId&quot;))
 
-vars.put(&quot;defendantReferralReasonId1&quot;, UUID.randomUUID().toString())
-log.info(&quot;defendantReferralReasonId1-&gt; &quot; + vars.get(&quot;defendantReferralReasonId1&quot;))
+vars.put(&quot;defendantReferralReasonId&quot;, UUID.randomUUID().toString())
+log.info(&quot;defendantReferralReasonId-&gt; &quot; + vars.get(&quot;defendantReferralReasonId&quot;))
 
-vars.put(&quot;caseId1&quot;, UUID.randomUUID().toString())
-log.info(&quot;caseId1-&gt; &quot; + vars.get(&quot;caseId1&quot;))
+vars.put(&quot;caseId&quot;, UUID.randomUUID().toString())
+log.info(&quot;caseId-&gt; &quot; + vars.get(&quot;caseId&quot;))
 
-vars.put(&quot;offenceId1&quot;, UUID.randomUUID().toString())
-log.info(&quot;offenceId1-&gt; &quot; + vars.get(&quot;offenceId1&quot;))
+vars.put(&quot;offenceId&quot;, UUID.randomUUID().toString())
+log.info(&quot;offenceId-&gt; &quot; + vars.get(&quot;offenceId&quot;))
 
-vars.put(&quot;hearingId&quot;, vars.get(&quot;hearingId1&quot;))
-vars.put(&quot;defendantId&quot;, vars.get(&quot;defendantId1&quot;))
-vars.put(&quot;defenceCounselId&quot;, vars.get(&quot;defenceCounselId1&quot;))
-vars.put(&quot;defendantReferralReasonId&quot;, vars.get(&quot;defendantReferralReasonId1&quot;))
-vars.put(&quot;caseId&quot;, vars.get(&quot;caseId1&quot;))
-vars.put(&quot;offenceId&quot;, vars.get(&quot;offenceId1&quot;))
 
 def evaluatedJson = new CompoundVariable(rawJson).execute()
 
@@ -1675,12 +1669,12 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
               <stringProp name="scriptLanguage">groovy</stringProp>
             </JSR223PreProcessor>
             <hashTree/>
-            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer">
               <stringProp name="ConstantTimer.delay">1000</stringProp>
             </ConstantTimer>
             <hashTree/>
           </hashTree>
-          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Poll Hearing Created" enabled="true">
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Poll Hearing Created">
             <stringProp name="scriptLanguage">groovy</stringProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="filename"></stringProp>
@@ -1726,7 +1720,7 @@ if (found) {
 }</stringProp>
           </JSR223Sampler>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Log Hearing Event 1" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Log Hearing Event">
             <intProp name="HTTPSampler.concurrentPool">6</intProp>
             <stringProp name="HTTPSampler.path">/hearing-service/command/api/rest/hearing/hearings/${hearingId1}/event</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -1745,7 +1739,7 @@ if (found) {
             <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
               <collectionProp name="HeaderManager.headers">
                 <elementProp name="" elementType="Header">
                   <stringProp name="Header.name">CJSCPPUID</stringProp>
@@ -1758,7 +1752,7 @@ if (found) {
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="LogHearingEvent1PreProcessor" enabled="true">
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="LogHearingEvent1PreProcessor">
               <stringProp name="cacheKey">true</stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
@@ -1775,8 +1769,8 @@ if (!file.exists()) {
 def rawJson = file.text
 
 vars.put(&quot;hearingEventId&quot;, UUID.randomUUID().toString())
-vars.put(&quot;hearingId&quot;, vars.get(&quot;hearingId1&quot;))
-vars.put(&quot;defenceCounselId&quot;, vars.get(&quot;defenceCounselId1&quot;))
+vars.put(&quot;hearingId&quot;, vars.get(&quot;hearingId&quot;))
+vars.put(&quot;defenceCounselId&quot;, vars.get(&quot;defenceCounselId&quot;))
 
 def evaluatedJson = new CompoundVariable(rawJson).execute()
 
@@ -1817,7 +1811,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="PublishCourtList1PreProcessor" enabled="true">
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="PublishCourtList1PreProcessor">
               <stringProp name="cacheKey">true</stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
@@ -1872,7 +1866,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="PublishCourtList2PreProcessor" enabled="true">
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="PublishCourtList2PreProcessor">
               <stringProp name="cacheKey">true</stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
@@ -1896,7 +1890,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="Simple Data Writer" enabled="true">
+        <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="Simple Data Writer">
           <boolProp name="ResultCollector.error_logging">true</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -1945,7 +1939,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults">
           <stringProp name="HTTPSampler.domain">${hostName}</stringProp>
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
@@ -1955,7 +1949,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
           <stringProp name="HTTPSampler.implementation"></stringProp>
         </ConfigTestElement>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Initiate Hearing" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Initiate Hearing">
           <intProp name="HTTPSampler.concurrentPool">6</intProp>
           <stringProp name="HTTPSampler.path">/hearing-service/command/api/rest/hearing/hearings</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -1974,7 +1968,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
           <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">CJSCPPUID</stringProp>
@@ -1987,7 +1981,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="CancelRemainingHearingDaysInitiateHearingPreProcessor" enabled="true">
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="CancelRemainingHearingDaysInitiateHearingPreProcessor">
             <stringProp name="cacheKey">true</stringProp>
             <stringProp name="filename"></stringProp>
             <stringProp name="parameters"></stringProp>
@@ -2042,12 +2036,12 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
             <stringProp name="scriptLanguage">groovy</stringProp>
           </JSR223PreProcessor>
           <hashTree/>
-          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer">
             <stringProp name="ConstantTimer.delay">1000</stringProp>
           </ConstantTimer>
           <hashTree/>
         </hashTree>
-        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Poll Hearing Created" enabled="true">
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Poll Hearing Created">
           <stringProp name="scriptLanguage">groovy</stringProp>
           <stringProp name="parameters"></stringProp>
           <stringProp name="filename"></stringProp>
@@ -2093,7 +2087,7 @@ if (found) {
 }</stringProp>
         </JSR223Sampler>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Update Defendant Attendance" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Update Defendant Attendance">
           <intProp name="HTTPSampler.concurrentPool">6</intProp>
           <stringProp name="HTTPSampler.path">/hearing-service/command/api/rest/hearing/hearings</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -2125,7 +2119,7 @@ if (found) {
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="CancelRemainingHearingDaysUpdateDefendantAttendancePreProcessor" enabled="true">
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="CancelRemainingHearingDaysUpdateDefendantAttendancePreProcessor">
             <stringProp name="cacheKey">true</stringProp>
             <stringProp name="filename"></stringProp>
             <stringProp name="parameters"></stringProp>
@@ -2148,7 +2142,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
           </JSR223PreProcessor>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add Prosecution Counsel" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add Prosecution Counsel">
           <intProp name="HTTPSampler.concurrentPool">6</intProp>
           <stringProp name="HTTPSampler.path">/hearing-service/command/api/rest/hearing/hearings/${hearingId}</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -2180,7 +2174,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="CancelRemainingHearingDaysAddProsecutionCounselPreProcessor" enabled="true">
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="CancelRemainingHearingDaysAddProsecutionCounselPreProcessor">
             <stringProp name="cacheKey">true</stringProp>
             <stringProp name="filename"></stringProp>
             <stringProp name="parameters"></stringProp>
@@ -2446,7 +2440,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
           <stringProp name="HTTPSampler.implementation"></stringProp>
         </ConfigTestElement>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Initiate Hearing" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Initiate Hearing">
           <intProp name="HTTPSampler.concurrentPool">6</intProp>
           <stringProp name="HTTPSampler.path">/hearing-service/command/api/rest/hearing/hearings</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -2478,7 +2472,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="ResultShouldPublishDDCHInitiateHearingPreProcessor" enabled="true">
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="ResultShouldPublishDDCHInitiateHearingPreProcessor">
             <stringProp name="cacheKey">true</stringProp>
             <stringProp name="filename"></stringProp>
             <stringProp name="parameters"></stringProp>
@@ -2534,7 +2528,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
           </JSR223PreProcessor>
           <hashTree/>
         </hashTree>
-        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Poll Hearing Created" enabled="true">
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Poll Hearing Created">
           <stringProp name="scriptLanguage">groovy</stringProp>
           <stringProp name="parameters"></stringProp>
           <stringProp name="filename"></stringProp>
@@ -2580,7 +2574,7 @@ if (found) {
 }</stringProp>
         </JSR223Sampler>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Update Defendant Attendance" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Update Defendant Attendance">
           <intProp name="HTTPSampler.concurrentPool">6</intProp>
           <stringProp name="HTTPSampler.path">/hearing-service/command/api/rest/hearing/hearings</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -2599,7 +2593,7 @@ if (found) {
           <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">CJSCPPUID</stringProp>
@@ -2612,7 +2606,7 @@ if (found) {
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="ResultShouldPublishDDCHUpdateDefendantAttendancePreProcessor" enabled="true">
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="ResultShouldPublishDDCHUpdateDefendantAttendancePreProcessor">
             <stringProp name="cacheKey">true</stringProp>
             <stringProp name="filename"></stringProp>
             <stringProp name="parameters"></stringProp>
@@ -2780,7 +2774,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="ResultShouldPublishDDCHSetTrialTypePreProcessor" enabled="true">
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="ResultShouldPublishDDCHSetTrialTypePreProcessor">
             <stringProp name="cacheKey">true</stringProp>
             <stringProp name="filename"></stringProp>
             <stringProp name="parameters"></stringProp>
@@ -2803,7 +2797,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
           </JSR223PreProcessor>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Share Results Initial" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Share Results Initial">
           <intProp name="HTTPSampler.concurrentPool">6</intProp>
           <stringProp name="HTTPSampler.path">/hearing-service/command/api/rest/hearing/hearings/${hearingId}/share-results</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -2835,7 +2829,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="ResultShouldPublishDDCHShareResultsInitialPreProcessor" enabled="true">
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="ResultShouldPublishDDCHShareResultsInitialPreProcessor">
             <stringProp name="cacheKey">true</stringProp>
             <stringProp name="filename"></stringProp>
             <stringProp name="parameters"></stringProp>
@@ -2861,7 +2855,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
           </JSR223PreProcessor>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Share Results Amend" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Share Results Amend">
           <intProp name="HTTPSampler.concurrentPool">6</intProp>
           <stringProp name="HTTPSampler.path">/hearing-service/command/api/rest/hearing/hearings/${hearingId}/share-results</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -2893,7 +2887,7 @@ vars.put(&quot;jsonMessage&quot;, evaluatedJson)</stringProp>
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="ResultShouldPublishDDCHShareResultsAmendPreProcessor" enabled="true">
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="ResultShouldPublishDDCHShareResultsAmendPreProcessor">
             <stringProp name="cacheKey">true</stringProp>
             <stringProp name="filename"></stringProp>
             <stringProp name="parameters"></stringProp>
