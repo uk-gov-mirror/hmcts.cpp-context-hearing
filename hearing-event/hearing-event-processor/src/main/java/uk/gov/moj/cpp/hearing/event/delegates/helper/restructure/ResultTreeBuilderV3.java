@@ -213,6 +213,7 @@ public class ResultTreeBuilderV3 {
                 .withCanExtendActiveOrder(getBooleanValue(resultDefinition.getCanExtendActiveOrder(), false))
                 .withCommittedToCC(getBooleanValue(resultDefinition.getCommittedToCC(), false))
                 .withSentToCC(getBooleanValue(resultDefinition.getSentToCC(), false));
+                .withIsDeemedServed(resultDefinition.getIsDeemedServed());
         if(resultTextConfHelper.isOldResultDefinition(resultLine.getOrderedDate())) {
             judicialResult.withResultText(ResultTextHelperV3.getResultText(resultDefinition, resultLine));
         }
