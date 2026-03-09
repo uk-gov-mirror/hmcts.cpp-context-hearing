@@ -163,6 +163,11 @@ public class PublishResultsDelegateV3 {
                 .setHearingDay(resultsShared.getHearingDay())
                 .setShadowListedOffences(getOffenceShadowListedForMagistratesNextHearing(resultsShared));
 
+        final List<TreeNode<ResultLine2>> restructuredDeletedResults = this.restructuringHelper.getDeletedResults(context, resultsShared, treeNodes);
+        if (isNotEmpty(restructuredDeletedResults)) {
+            hearingResulted.getHearing().setDeletedJudicialResults(toDeletedResults(restructuredDeletedResults, resultsShared.getHearing()));
+        }
+                        
         final JsonObject jsonObject = this.objectToJsonObjectConverter.convert(hearingResulted);
         final JsonEnvelope jsonEnvelope = envelopeFrom(metadataFrom(context.metadata()).withName("public.events.hearing.hearing-resulted"), jsonObject);
         if (LOGGER.isDebugEnabled()) {

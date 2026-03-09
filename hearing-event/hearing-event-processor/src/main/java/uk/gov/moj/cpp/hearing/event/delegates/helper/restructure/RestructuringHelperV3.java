@@ -47,6 +47,11 @@ public class RestructuringHelperV3 {
         this.resultTextConfHelper = resultTextConfHelper;
     }
 
+    public List<TreeNode<ResultLine2>> getDeletedResults(final JsonEnvelope context, final ResultsSharedV3 resultsShared, final List<TreeNode<ResultDefinition>> treeNodesResultDefinition) {
+        final List<TreeNode<ResultLine2>> treeNodesOrg = resultTreeBuilder.buildDeleted(context, resultsShared, treeNodesResultDefinition);
+        return updatePublishForNows(treeNodesOrg);
+    }    
+
     public List<TreeNode<ResultLine2>> restructure(final JsonEnvelope context, final ResultsSharedV3 resultsShared, final List<TreeNode<ResultDefinition>> treeNodesResultDefinition) {
 
         final List<TreeNode<ResultLine2>> treeNodesOrg = resultTreeBuilder.build(context, resultsShared, treeNodesResultDefinition);
