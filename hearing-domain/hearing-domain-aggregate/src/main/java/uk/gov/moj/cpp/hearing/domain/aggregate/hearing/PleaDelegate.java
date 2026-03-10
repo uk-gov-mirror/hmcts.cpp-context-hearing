@@ -9,7 +9,15 @@ import static uk.gov.moj.cpp.hearing.domain.aggregate.util.PleaVerdictUtil.isGui
 import static uk.gov.moj.cpp.hearing.domain.event.ConvictionDateAdded.convictionDateAdded;
 import static uk.gov.moj.cpp.hearing.domain.event.ConvictionDateRemoved.convictionDateRemoved;
 
-import uk.gov.justice.core.courts.*;
+import uk.gov.justice.core.courts.CourtApplication;
+import uk.gov.justice.core.courts.CourtOrderOffence;
+import uk.gov.justice.core.courts.Hearing;
+import uk.gov.justice.core.courts.IndicatedPlea;
+import uk.gov.justice.core.courts.Offence;
+import uk.gov.justice.core.courts.Plea;
+import uk.gov.justice.core.courts.PleaModel;
+import uk.gov.justice.core.courts.ProsecutionCase;
+import uk.gov.justice.core.courts.Verdict;
 import uk.gov.moj.cpp.hearing.domain.event.InheritedPlea;
 import uk.gov.moj.cpp.hearing.domain.event.PleaUpsert;
 import uk.gov.moj.cpp.hearing.domain.event.IndicatedPleaUpdated;
