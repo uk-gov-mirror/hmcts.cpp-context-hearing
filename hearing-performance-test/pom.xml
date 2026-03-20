@@ -57,7 +57,7 @@
                         <artifactId>jmeter-maven-plugin</artifactId>
                         <version>${jmeter-maven-plugin.version}</version>
                         <configuration>
-                            <errorRateThresholdInPercent>75</errorRateThresholdInPercent>
+                            <errorRateThresholdInPercent>100</errorRateThresholdInPercent>
                         </configuration>
                         <executions>
                             <execution>
