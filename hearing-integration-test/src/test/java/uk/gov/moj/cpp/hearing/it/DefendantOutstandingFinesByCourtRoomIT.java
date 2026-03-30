@@ -44,7 +44,6 @@ public class DefendantOutstandingFinesByCourtRoomIT extends AbstractIT {
     }
 
     @Test
-    @Disabled("Ignoring this test as we are not able to reproduce the failure locally.")
     public void shouldPostComputeOutstandingFines() throws JsonProcessingException {
         final InitiateHearingCommand initiateHearingCommand = standardInitiateHearingTemplate();
         final CourtCentre courtCentre = initiateHearingCommand.getHearing().getCourtCentre();
