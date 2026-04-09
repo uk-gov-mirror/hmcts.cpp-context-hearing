@@ -15,6 +15,7 @@ import uk.gov.justice.services.messaging.Envelope;
 import uk.gov.moj.cpp.hearing.domain.event.CourtApplicationHearingDeleted;
 import uk.gov.moj.cpp.hearing.persist.entity.ha.Hearing;
 import uk.gov.moj.cpp.hearing.repository.HearingRepository;
+import uk.gov.moj.cpp.hearing.repository.ProsecutionCaseRepository;
 
 import java.util.UUID;
 
@@ -30,6 +31,9 @@ public class HearingDeletedEventListenerTest {
 
     @Mock
     private HearingRepository hearingRepository;
+
+    @Mock
+    private ProsecutionCaseRepository pcRepository;
 
     @InjectMocks
     private HearingDeletedEventListener hearingDeletedEventListener;
