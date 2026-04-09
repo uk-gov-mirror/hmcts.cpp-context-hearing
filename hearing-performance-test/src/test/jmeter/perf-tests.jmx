@@ -81,7 +81,7 @@
           </elementProp>
           <elementProp name="waitAfterEachCommand" elementType="Argument">
             <stringProp name="Argument.name">waitAfterEachCommand</stringProp>
-            <stringProp name="Argument.value">500</stringProp>
+            <stringProp name="Argument.value">200</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
