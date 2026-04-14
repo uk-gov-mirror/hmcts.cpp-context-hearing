@@ -1526,12 +1526,12 @@ public class HearingAggregate implements Aggregate {
                 .withCourtApplicationApplicantIds(courtListRestrictedCmd.getCourtApplicationApplicantIds())
                 .withCourtApplicationIds(courtListRestrictedCmd.getCourtApplicationIds())
                 .withCourtApplicationRespondentIds(courtListRestrictedCmd.getCourtApplicationRespondentIds())
+                .withCourtApplicationSubjectIds(courtListRestrictedCmd.getCourtApplicationSubjectIds())
                 .withCourtApplicationType(courtListRestrictedCmd.getCourtApplicationType())
                 .withDefendantIds(courtListRestrictedCmd.getDefendantIds())
                 .withRestrictCourtList(courtListRestrictedCmd.getRestrictCourtList())
                 .withHearingId(courtListRestrictedCmd.getHearingId())
                 .withOffenceIds(courtListRestrictedCmd.getOffenceIds())
-                .withCourtApplicationType(courtListRestrictedCmd.getCourtApplicationType())
                 .build()));
     }
 
