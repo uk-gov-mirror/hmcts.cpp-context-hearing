@@ -39,6 +39,8 @@ import java.util.UUID;
 
 import javax.json.JsonObject;
 
+import io.restassured.path.json.JsonPath;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.hamcrest.Matcher;
 import org.junit.jupiter.api.BeforeEach;
@@ -78,10 +80,10 @@ public class CourtListRestrictionSteps extends AbstractIT {
         sendListingPublicEvent((JsonObject) objectToJsonValueConverter.convert(restrictCourtListData));
     }
 
-    public void hearingEventsCourtListRestrictedReceived(final Matcher<?> matcher) {
+    public JsonPath hearingEventsCourtListRestrictedReceived(final Matcher<?> matcher) {
         try (final Utilities.EventListener eventListener = listenFor(HEARING_EVENTS_COURT_LIST_RESTRICTED, HEARING_EVENT)
                 .withFilter(matcher)) {
-            eventListener.waitFor();
+            return eventListener.waitFor();
         }
     }
 

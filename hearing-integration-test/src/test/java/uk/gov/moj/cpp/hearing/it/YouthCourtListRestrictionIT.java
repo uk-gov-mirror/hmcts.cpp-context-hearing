@@ -4,6 +4,7 @@ import static com.jayway.jsonpath.matchers.JsonPathMatchers.isJson;
 import static com.jayway.jsonpath.matchers.JsonPathMatchers.withJsonPath;
 import static java.util.Collections.singletonList;
 import static java.util.UUID.randomUUID;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
@@ -34,6 +35,8 @@ import java.util.UUID;
 
 import javax.json.Json;
 
+import io.restassured.path.json.JsonPath;
+
 import org.junit.jupiter.api.Test;
 
 public class YouthCourtListRestrictionIT extends AbstractIT {
@@ -60,10 +63,11 @@ public class YouthCourtListRestrictionIT extends AbstractIT {
         final CourtListRestrictionSteps steps = new CourtListRestrictionSteps();
         steps.hideDefendantFromXhibit(hearing, true);
 
-        steps.hearingEventsCourtListRestrictedReceived(isJson(allOf(
+        final JsonPath restrictedEvent = steps.hearingEventsCourtListRestrictedReceived(isJson(allOf(
                 withJsonPath("$.hearingId", is(hearing.getId().toString())),
                 withJsonPath("$.defendantIds", hasSize(1)),
                 withJsonPath("$.restrictCourtList", is(true)))));
+        assertThat(restrictedEvent.getBoolean("restrictCourtList"), is(true));
     }
 
     @Test
@@ -74,10 +78,11 @@ public class YouthCourtListRestrictionIT extends AbstractIT {
         final CourtListRestrictionSteps steps = new CourtListRestrictionSteps();
 
         steps.hideDefendantFromXhibit(hearing, false);
-        steps.hearingEventsCourtListRestrictedReceived(isJson(allOf(
+        final JsonPath notRestrictedEvent = steps.hearingEventsCourtListRestrictedReceived(isJson(allOf(
                 withJsonPath("$.hearingId", is(hearing.getId().toString())),
                 withJsonPath("$.defendantIds", hasSize(1)),
                 withJsonPath("$.restrictCourtList", is(false)))));
+        assertThat(notRestrictedEvent.getBoolean("restrictCourtList"), is(false));
 
         updateDefendants(with(caseDefendantDetailsChangedCommandTemplate(), template -> {
             template.getDefendants().get(0).setId(hearingHelper.getFirstDefendantForFirstCase().getId());
@@ -86,10 +91,11 @@ public class YouthCourtListRestrictionIT extends AbstractIT {
         }));
 
         steps.hideDefendantFromXhibit(hearing, true);
-        steps.hearingEventsCourtListRestrictedReceived(isJson(allOf(
+        final JsonPath restrictedEvent = steps.hearingEventsCourtListRestrictedReceived(isJson(allOf(
                 withJsonPath("$.hearingId", is(hearing.getId().toString())),
                 withJsonPath("$.defendantIds", hasSize(1)),
                 withJsonPath("$.restrictCourtList", is(true)))));
+        assertThat(restrictedEvent.getBoolean("restrictCourtList"), is(true));
     }
 
     @Test
@@ -105,16 +111,18 @@ public class YouthCourtListRestrictionIT extends AbstractIT {
         final CourtListRestrictionSteps steps = new CourtListRestrictionSteps();
 
         steps.hideDefendantFromXhibit(hearing, false);
-        steps.hearingEventsCourtListRestrictedReceived(isJson(allOf(
+        final JsonPath defendantNotRestricted = steps.hearingEventsCourtListRestrictedReceived(isJson(allOf(
                 withJsonPath("$.hearingId", is(hearing.getId().toString())),
                 withJsonPath("$.defendantIds", hasSize(1)),
                 withJsonPath("$.restrictCourtList", is(false)))));
+        assertThat(defendantNotRestricted.getBoolean("restrictCourtList"), is(false));
 
         steps.hideApplicationApplicantFromXhibit(hearing, false);
-        steps.hearingEventsCourtListRestrictedReceived(isJson(allOf(
+        final JsonPath applicantNotRestricted = steps.hearingEventsCourtListRestrictedReceived(isJson(allOf(
                 withJsonPath("$.hearingId", is(hearing.getId().toString())),
                 withJsonPath("$.courtApplicationApplicantIds", hasSize(1)),
                 withJsonPath("$.restrictCourtList", is(false)))));
+        assertThat(applicantNotRestricted.getBoolean("restrictCourtList"), is(false));
 
         updateDefendants(with(caseDefendantDetailsChangedCommandTemplate(), template -> {
             template.getDefendants().get(0).setId(hearingHelper.getFirstDefendantForFirstCase().getId());
@@ -126,16 +134,18 @@ public class YouthCourtListRestrictionIT extends AbstractIT {
         sendPublicApplicationChangedMessage(courtApplication);
 
         steps.hideDefendantFromXhibit(hearing, true);
-        steps.hearingEventsCourtListRestrictedReceived(isJson(allOf(
+        final JsonPath defendantRestricted = steps.hearingEventsCourtListRestrictedReceived(isJson(allOf(
                 withJsonPath("$.hearingId", is(hearing.getId().toString())),
                 withJsonPath("$.defendantIds", hasSize(1)),
                 withJsonPath("$.restrictCourtList", is(true)))));
+        assertThat(defendantRestricted.getBoolean("restrictCourtList"), is(true));
 
         steps.hideApplicationApplicantFromXhibit(hearing, true);
-        steps.hearingEventsCourtListRestrictedReceived(isJson(allOf(
+        final JsonPath applicantRestricted = steps.hearingEventsCourtListRestrictedReceived(isJson(allOf(
                 withJsonPath("$.hearingId", is(hearing.getId().toString())),
                 withJsonPath("$.courtApplicationApplicantIds", hasSize(1)),
                 withJsonPath("$.restrictCourtList", is(true)))));
+        assertThat(applicantRestricted.getBoolean("restrictCourtList"), is(true));
     }
 
     @Test
@@ -151,19 +161,21 @@ public class YouthCourtListRestrictionIT extends AbstractIT {
         final CourtListRestrictionSteps steps = new CourtListRestrictionSteps();
 
         steps.hideApplicationApplicantFromXhibit(hearing, false);
-        steps.hearingEventsCourtListRestrictedReceived(isJson(allOf(
+        final JsonPath notRestricted = steps.hearingEventsCourtListRestrictedReceived(isJson(allOf(
                 withJsonPath("$.hearingId", is(hearing.getId().toString())),
                 withJsonPath("$.courtApplicationApplicantIds", hasSize(1)),
                 withJsonPath("$.restrictCourtList", is(false)))));
+        assertThat(notRestricted.getBoolean("restrictCourtList"), is(false));
 
         courtApplication.getApplicant().getMasterDefendant().setIsYouth(true);
         sendPublicApplicationChangedMessage(courtApplication);
 
         steps.hideApplicationApplicantFromXhibit(hearing, true);
-        steps.hearingEventsCourtListRestrictedReceived(isJson(allOf(
+        final JsonPath restricted = steps.hearingEventsCourtListRestrictedReceived(isJson(allOf(
                 withJsonPath("$.hearingId", is(hearing.getId().toString())),
                 withJsonPath("$.courtApplicationApplicantIds", hasSize(1)),
                 withJsonPath("$.restrictCourtList", is(true)))));
+        assertThat(restricted.getBoolean("restrictCourtList"), is(true));
     }
 
     private CourtApplicationParty buildAdultApplicationParty(final HearingFactory factory) {
